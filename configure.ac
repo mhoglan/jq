@@ -1,4 +1,4 @@
-m4_define([jq_version], m4_esyscmd_s([git describe --tags --dirty --match 'jq-*'|sed 's/^jq-//']))
+m4_define([jq_version], m4_esyscmd_s([git describe --tags --dirty --match 'jq-*'|sed 's/^jq-//'|sed 's/-/_/g']))
 
 AC_INIT([jq], [jq_version], [mu@netsoc.tcd.ie],
              [jq], [http://stedolan.github.com/jq/])
